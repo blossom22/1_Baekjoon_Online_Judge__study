@@ -18,6 +18,6 @@ for i in range(t):
 for i in range(t):
     dp = [j for j in range(1,nlist[i]+1)]   # 작은 문제부터 해결해서 저장할 dp배열을 만든다. 처음으로 여기서 만든 dp는 제일 하위단계의 배열(1,2,3...)
     for a in range(klist[i]):
-        for b in range(1,nlist[i]):
+        for b in range(1,nlist[i]):         # dp[0]은 계속 1로 고정되므로 건들지 않는 것
             dp[b] = dp[b]+dp[b-1]           # 반복문으로 dp를 업데이트한다. (한층씩 높아질수록, 호수가 커질수록, dp를 증가시킨다)
     print(dp[nlist[i]-1])                   # 최종적으로 만든 dp에서, 해당하는 인덱스(호수값-1)의 dp값을 구하면 그게 곧 답이다
