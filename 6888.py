@@ -1,4 +1,4 @@
-# Baekjoon_BRONZE3_6888: Terms of Office  
+# Baekjoon_BRONZE4_6888: Terms of Office  
 
 x = int(input())
 y = int(input())
