@@ -1,4 +1,4 @@
-# Baekjoon_BRONZE4_7510: 고급 수학   
+# Baekjoon_BRONZE3_7510: 고급 수학   
 
 n = int(input())
 m = [list(map(int, input().split())) for _ in range(n)]
