@@ -12,3 +12,31 @@ for num in mlist:
         print(1)
     else:
         print(0)
+
+
+# 이런식으로도 풀 수 있다.
+import sys
+n = int(sys.stdin.readline())
+nlist = list(map(int, sys.stdin.readline().split()))
+nlist.sort()
+
+m = int(sys.stdin.readline())
+mlist = list(map(int, sys.stdin.readline().split()))
+
+answer = []
+for i in mlist:
+    left = 0
+    right = len(nlist)-1
+    while left<=right:
+        mid = (left+right)//2
+        if i==nlist[mid]:
+            answer.append(1)
+            break
+        elif i>nlist[mid]:
+            left = mid+1
+        else:
+            right = mid-1
+    else:
+        answer.append(0)
+for i in answer:
+    print(i)
